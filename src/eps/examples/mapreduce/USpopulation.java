@@ -52,7 +52,6 @@ public class USpopulation extends Configured implements Tool {
         Configuration conf = getConf();
 
         args = new GenericOptionsParser(conf, args).getRemainingArgs();
-        FileSystem.get(conf).delete(new Path("/user/kgm1/out/"), true);
 
         Job job = Job.getInstance(conf);
         job.setJarByClass(USpopulation.class);
